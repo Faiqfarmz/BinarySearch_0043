@@ -17,3 +17,7 @@ void input() {
         }
     }
 
+    cout << "\n=============================\n";
+    cout << "      Masukkan element Array\n";
+    cout << "=============================\n";
+
