@@ -20,11 +20,25 @@ void input() {
     cout << "\n=============================\n";
     cout << "      Masukkan element Array\n";
     cout << "=============================\n";
-    
+
      for (int i = 0; i < nPanjang; i++) {
         cout << "Data ke-" << (i + 1) << " = ";
         cin >> element[i];
     }
 }
 
+void bubbleSortArray() {
+    int pass = 1;
+    int temp;
 
+    do {
+        for (int j = 0; j < nPanjang - pass; j++) {
+            if (element[j] > element[j + 1]) {
+                temp = element[j];
+                element[j] = element[j + 1];
+                element[j + 1] = temp;
+            }
+        }
+        pass++;
+    } while (pass <= nPanjang - 1);
+}
